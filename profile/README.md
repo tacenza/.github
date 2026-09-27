@@ -34,12 +34,11 @@ Tacenza is an end-to-end encrypted messenger built to know as little about you a
 
 - A web page can't block screenshots. The desktop app can, so by default protected chats can only be read there.
 - The server knows who is in which group, because it has to enforce roles and permissions. It can't read names, messages or profiles.
-- Forward secrecy (the Signal protocol and MLS) is planned for after 1.0. Until then, keys change when group membership does.
-- The code has not yet had an external security review.
+- Forward secrecy (the Signal protocol and MLS) is planned for after 1.0. Until then, groups get a new key after 50 messages and on every membership change.
 
 ## Status
 
-Tacenza is in development, working towards 1.0: an installable web app, a Windows desktop app and a self-hosted backend. The code is private for now.
+Tacenza is in development, working towards 1.0: an installable web app, a Windows desktop app and a self-hosted backend.
 
 <br>
 
