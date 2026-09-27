@@ -36,6 +36,23 @@ Tacenza is an end-to-end encrypted messenger built to know as little about you a
 - The server knows who is in which group, because it has to enforce roles and permissions. It can't read names, messages or profiles.
 - Forward secrecy (the Signal protocol and MLS) is planned for after 1.0. Until then, groups get a new key after 50 messages and on every membership change.
 
+## Verify it yourself
+
+The code isn't open source, so you shouldn't have to take our word for it. Here is what you can check on your own.
+
+**Everyone gets the same app.** Each release publishes the SHA-256 of the app's JavaScript on the Security page and in `bundle-hash.txt`. Hash the file your browser is served and compare:
+
+```bash
+curl -s https://tacenza.app/bundle-hash.txt
+curl -s https://tacenza.app/assets/<file from bundle-hash.txt> | sha256sum
+```
+
+The Windows app loads the same code, so the same hash applies there.
+
+**Nothing goes to anyone else.** Open your browser's developer tools and watch the Network tab while you use Tacenza. Every request goes to Tacenza itself. There are no analytics, fonts or scripts from third parties.
+
+**Nobody is in the middle.** Compare safety numbers with the people you write to, in person or on a call. If they match, your messages are encrypted to them and nobody else. If someone's keys ever change, the chat locks until you've checked again.
+
 ## Status
 
 Tacenza is in development, working towards 1.0: an installable web app, a Windows desktop app and a self-hosted backend.
