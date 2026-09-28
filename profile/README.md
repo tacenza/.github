@@ -40,10 +40,9 @@ Tacenza is an end-to-end encrypted messenger built to know as little about you a
 
 The code isn't open source, so you shouldn't have to take our word for it. Here is what you can check on your own.
 
-**Everyone gets the same app.** Each release publishes the SHA-256 of the app's JavaScript on the Security page and in `bundle-hash.txt`. Hash the file your browser is served and compare:
+**Everyone gets the same app.** For every release, our build pipeline publishes the SHA-256 of the app's JavaScript in [tacenza/releases](https://github.com/tacenza/releases), a record kept apart from the servers that run Tacenza. Hash the file your browser is served and compare it with the latest release:
 
 ```bash
-curl -s https://tacenza.app/bundle-hash.txt
 curl -s https://tacenza.app/assets/<file from bundle-hash.txt> | sha256sum
 ```
 
