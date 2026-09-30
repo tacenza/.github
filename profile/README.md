@@ -43,7 +43,7 @@ The code isn't open source, so you shouldn't have to take our word for it. Here 
 **Everyone gets the same app.** For every release, our build pipeline publishes the SHA-256 of the app's JavaScript in [tacenza/releases](https://github.com/tacenza/releases), a record kept apart from the servers that run Tacenza. Hash the file your browser is served and compare it with the latest release:
 
 ```bash
-curl -s https://tacenza.app/assets/<file from bundle-hash.txt> | sha256sum
+curl -s https://chat.tacenza.app/assets/<file from bundle-hash.txt> | sha256sum
 ```
 
 The Windows app loads the same code, so the same hash applies there.
